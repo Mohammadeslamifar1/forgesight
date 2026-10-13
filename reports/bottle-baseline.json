@@ -1,0 +1,946 @@
+{
+  "model_id": "model-20261012T151712-8bd5204d",
+  "created_at": "2026-10-12T15:22:47.467776+00:00",
+  "category": "bottle",
+  "test_count": 83,
+  "normal_count": 20,
+  "defect_count": 63,
+  "threshold": 1.6383267641067505,
+  "image_auroc": 1.0,
+  "image_average_precision": 0.9999999999999998,
+  "operating_point": {
+    "tp": 63,
+    "fp": 1,
+    "tn": 19,
+    "fn": 0,
+    "precision": 0.984375,
+    "recall": 1.0,
+    "false_positive_rate": 0.05,
+    "f1": 0.9921259842519685
+  },
+  "image_auroc_ci95": {
+    "low": 1.0,
+    "high": 1.0,
+    "repetitions": 300,
+    "method": "stratified percentile bootstrap; fixed fitted model and threshold"
+  },
+  "pixel_auroc": 0.9813058240430759,
+  "pixel_average_precision": 0.711143836449469,
+  "pixel_resolution": [
+    224,
+    224
+  ],
+  "baseline": {
+    "method": "Mean normal RGB template, top-1% squared pixel residual at 32 x 32",
+    "image_auroc": 0.9126984126984127,
+    "image_average_precision": 0.9725205388783695
+  },
+  "latency_ms": {
+    "median": 82.43010001024231,
+    "p95": 100.83466000505723,
+    "scope": "preprocess + encoder + nearest-neighbor + heatmap; excludes image I/O and HTTP",
+    "device": "cpu",
+    "threads": 4,
+    "warmup": 3
+  },
+  "roc_curve": [
+    {
+      "fpr": 0.0,
+      "tpr": 0.0
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 0.015873015873015872
+    },
+    {
+      "fpr": 0.0,
+      "tpr": 1.0
+    },
+    {
+      "fpr": 1.0,
+      "tpr": 1.0
+    }
+  ],
+  "shifts": {
+    "darker_0.65": {
+      "image_auroc": 1.0,
+      "image_average_precision": 0.9999999999999998,
+      "operating_point": {
+        "tp": 63,
+        "fp": 20,
+        "tn": 0,
+        "fn": 0,
+        "precision": 0.7590361445783133,
+        "recall": 1.0,
+        "false_positive_rate": 1.0,
+        "f1": 0.863013698630137
+      }
+    },
+    "brighter_1.35": {
+      "image_auroc": 1.0,
+      "image_average_precision": 0.9999999999999998,
+      "operating_point": {
+        "tp": 63,
+        "fp": 3,
+        "tn": 17,
+        "fn": 0,
+        "precision": 0.9545454545454546,
+        "recall": 1.0,
+        "false_positive_rate": 0.15,
+        "f1": 0.9767441860465116
+      }
+    },
+    "blur_radius_2": {
+      "image_auroc": 1.0,
+      "image_average_precision": 0.9999999999999998,
+      "operating_point": {
+        "tp": 63,
+        "fp": 1,
+        "tn": 19,
+        "fn": 0,
+        "precision": 0.984375,
+        "recall": 1.0,
+        "false_positive_rate": 0.05,
+        "f1": 0.9921259842519685
+      }
+    }
+  },
+  "samples": [
+    {
+      "id": "broken_large-000",
+      "path": "bottle/test/broken_large/000.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/000_mask.png",
+      "score": 3.334845781326294,
+      "baseline_score": 0.030202152207493782,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-001",
+      "path": "bottle/test/broken_large/001.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/001_mask.png",
+      "score": 3.4517366886138916,
+      "baseline_score": 0.06051351875066757,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-002",
+      "path": "bottle/test/broken_large/002.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/002_mask.png",
+      "score": 3.073594093322754,
+      "baseline_score": 0.033001575618982315,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-003",
+      "path": "bottle/test/broken_large/003.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/003_mask.png",
+      "score": 3.451669931411743,
+      "baseline_score": 0.05009053647518158,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-004",
+      "path": "bottle/test/broken_large/004.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/004_mask.png",
+      "score": 3.5309948921203613,
+      "baseline_score": 0.18426500260829926,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-005",
+      "path": "bottle/test/broken_large/005.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/005_mask.png",
+      "score": 3.212139368057251,
+      "baseline_score": 0.03857356682419777,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-006",
+      "path": "bottle/test/broken_large/006.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/006_mask.png",
+      "score": 3.6664791107177734,
+      "baseline_score": 0.09280657023191452,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-007",
+      "path": "bottle/test/broken_large/007.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/007_mask.png",
+      "score": 3.121600389480591,
+      "baseline_score": 0.03350711241364479,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-008",
+      "path": "bottle/test/broken_large/008.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/008_mask.png",
+      "score": 3.3627452850341797,
+      "baseline_score": 0.09256722778081894,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-009",
+      "path": "bottle/test/broken_large/009.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/009_mask.png",
+      "score": 2.8090758323669434,
+      "baseline_score": 0.024633103981614113,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-010",
+      "path": "bottle/test/broken_large/010.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/010_mask.png",
+      "score": 3.3560233116149902,
+      "baseline_score": 0.034030113369226456,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-011",
+      "path": "bottle/test/broken_large/011.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/011_mask.png",
+      "score": 2.8769209384918213,
+      "baseline_score": 0.03128892183303833,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-012",
+      "path": "bottle/test/broken_large/012.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/012_mask.png",
+      "score": 3.263425827026367,
+      "baseline_score": 0.09163973480463028,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-013",
+      "path": "bottle/test/broken_large/013.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/013_mask.png",
+      "score": 3.040001153945923,
+      "baseline_score": 0.07675398141145706,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-014",
+      "path": "bottle/test/broken_large/014.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/014_mask.png",
+      "score": 3.327925205230713,
+      "baseline_score": 0.16116732358932495,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-015",
+      "path": "bottle/test/broken_large/015.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/015_mask.png",
+      "score": 3.2295308113098145,
+      "baseline_score": 0.050610970705747604,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-016",
+      "path": "bottle/test/broken_large/016.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/016_mask.png",
+      "score": 3.259697437286377,
+      "baseline_score": 0.08537539839744568,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-017",
+      "path": "bottle/test/broken_large/017.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/017_mask.png",
+      "score": 3.4070210456848145,
+      "baseline_score": 0.16015729308128357,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-018",
+      "path": "bottle/test/broken_large/018.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/018_mask.png",
+      "score": 3.3012149333953857,
+      "baseline_score": 0.09687723964452744,
+      "flagged": true
+    },
+    {
+      "id": "broken_large-019",
+      "path": "bottle/test/broken_large/019.png",
+      "defect": "broken_large",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_large/019_mask.png",
+      "score": 3.274628162384033,
+      "baseline_score": 0.0390721894800663,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-000",
+      "path": "bottle/test/broken_small/000.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/000_mask.png",
+      "score": 2.185558319091797,
+      "baseline_score": 0.013312562368810177,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-001",
+      "path": "bottle/test/broken_small/001.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/001_mask.png",
+      "score": 3.1514482498168945,
+      "baseline_score": 0.05842667445540428,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-002",
+      "path": "bottle/test/broken_small/002.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/002_mask.png",
+      "score": 3.1791977882385254,
+      "baseline_score": 0.11118593066930771,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-003",
+      "path": "bottle/test/broken_small/003.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/003_mask.png",
+      "score": 3.4112892150878906,
+      "baseline_score": 0.1309608668088913,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-004",
+      "path": "bottle/test/broken_small/004.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/004_mask.png",
+      "score": 3.5129082202911377,
+      "baseline_score": 0.3130682408809662,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-005",
+      "path": "bottle/test/broken_small/005.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/005_mask.png",
+      "score": 2.7488629817962646,
+      "baseline_score": 0.008557490073144436,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-006",
+      "path": "bottle/test/broken_small/006.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/006_mask.png",
+      "score": 3.0024971961975098,
+      "baseline_score": 0.049717389047145844,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-007",
+      "path": "bottle/test/broken_small/007.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/007_mask.png",
+      "score": 2.7370409965515137,
+      "baseline_score": 0.0321912057697773,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-008",
+      "path": "bottle/test/broken_small/008.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/008_mask.png",
+      "score": 2.875556707382202,
+      "baseline_score": 0.009949762374162674,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-009",
+      "path": "bottle/test/broken_small/009.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/009_mask.png",
+      "score": 3.2139275074005127,
+      "baseline_score": 0.04394140467047691,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-010",
+      "path": "bottle/test/broken_small/010.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/010_mask.png",
+      "score": 3.3351080417633057,
+      "baseline_score": 0.10814335942268372,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-011",
+      "path": "bottle/test/broken_small/011.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/011_mask.png",
+      "score": 2.8576388359069824,
+      "baseline_score": 0.06010669097304344,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-012",
+      "path": "bottle/test/broken_small/012.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/012_mask.png",
+      "score": 3.4981913566589355,
+      "baseline_score": 0.131905660033226,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-013",
+      "path": "bottle/test/broken_small/013.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/013_mask.png",
+      "score": 2.88313627243042,
+      "baseline_score": 0.03747529163956642,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-014",
+      "path": "bottle/test/broken_small/014.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/014_mask.png",
+      "score": 2.654047727584839,
+      "baseline_score": 0.05416399613022804,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-015",
+      "path": "bottle/test/broken_small/015.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/015_mask.png",
+      "score": 2.7515127658843994,
+      "baseline_score": 0.009243511594831944,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-016",
+      "path": "bottle/test/broken_small/016.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/016_mask.png",
+      "score": 3.1586923599243164,
+      "baseline_score": 0.040076520293951035,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-017",
+      "path": "bottle/test/broken_small/017.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/017_mask.png",
+      "score": 3.4941132068634033,
+      "baseline_score": 0.15996411442756653,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-018",
+      "path": "bottle/test/broken_small/018.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/018_mask.png",
+      "score": 3.6747868061065674,
+      "baseline_score": 0.2995535135269165,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-019",
+      "path": "bottle/test/broken_small/019.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/019_mask.png",
+      "score": 3.208573818206787,
+      "baseline_score": 0.0453067272901535,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-020",
+      "path": "bottle/test/broken_small/020.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/020_mask.png",
+      "score": 3.4638099670410156,
+      "baseline_score": 0.1438082605600357,
+      "flagged": true
+    },
+    {
+      "id": "broken_small-021",
+      "path": "bottle/test/broken_small/021.png",
+      "defect": "broken_small",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/broken_small/021_mask.png",
+      "score": 3.2921526432037354,
+      "baseline_score": 0.06093578040599823,
+      "flagged": true
+    },
+    {
+      "id": "contamination-000",
+      "path": "bottle/test/contamination/000.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/000_mask.png",
+      "score": 2.812340259552002,
+      "baseline_score": 0.02993001975119114,
+      "flagged": true
+    },
+    {
+      "id": "contamination-001",
+      "path": "bottle/test/contamination/001.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/001_mask.png",
+      "score": 2.3110928535461426,
+      "baseline_score": 0.014369752258062363,
+      "flagged": true
+    },
+    {
+      "id": "contamination-002",
+      "path": "bottle/test/contamination/002.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/002_mask.png",
+      "score": 2.687985420227051,
+      "baseline_score": 0.040758516639471054,
+      "flagged": true
+    },
+    {
+      "id": "contamination-003",
+      "path": "bottle/test/contamination/003.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/003_mask.png",
+      "score": 1.8702665567398071,
+      "baseline_score": 0.046678658574819565,
+      "flagged": true
+    },
+    {
+      "id": "contamination-004",
+      "path": "bottle/test/contamination/004.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/004_mask.png",
+      "score": 2.0546467304229736,
+      "baseline_score": 0.013261902146041393,
+      "flagged": true
+    },
+    {
+      "id": "contamination-005",
+      "path": "bottle/test/contamination/005.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/005_mask.png",
+      "score": 3.1913318634033203,
+      "baseline_score": 0.07298781722784042,
+      "flagged": true
+    },
+    {
+      "id": "contamination-006",
+      "path": "bottle/test/contamination/006.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/006_mask.png",
+      "score": 2.8157730102539062,
+      "baseline_score": 0.10157175362110138,
+      "flagged": true
+    },
+    {
+      "id": "contamination-007",
+      "path": "bottle/test/contamination/007.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/007_mask.png",
+      "score": 3.8710014820098877,
+      "baseline_score": 0.16338087618350983,
+      "flagged": true
+    },
+    {
+      "id": "contamination-008",
+      "path": "bottle/test/contamination/008.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/008_mask.png",
+      "score": 2.830702781677246,
+      "baseline_score": 0.020416127517819405,
+      "flagged": true
+    },
+    {
+      "id": "contamination-009",
+      "path": "bottle/test/contamination/009.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/009_mask.png",
+      "score": 2.9213829040527344,
+      "baseline_score": 0.013197597116231918,
+      "flagged": true
+    },
+    {
+      "id": "contamination-010",
+      "path": "bottle/test/contamination/010.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/010_mask.png",
+      "score": 2.9524223804473877,
+      "baseline_score": 0.028044141829013824,
+      "flagged": true
+    },
+    {
+      "id": "contamination-011",
+      "path": "bottle/test/contamination/011.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/011_mask.png",
+      "score": 2.7734971046447754,
+      "baseline_score": 0.03442529961466789,
+      "flagged": true
+    },
+    {
+      "id": "contamination-012",
+      "path": "bottle/test/contamination/012.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/012_mask.png",
+      "score": 2.292224407196045,
+      "baseline_score": 0.039831604808568954,
+      "flagged": true
+    },
+    {
+      "id": "contamination-013",
+      "path": "bottle/test/contamination/013.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/013_mask.png",
+      "score": 3.8209357261657715,
+      "baseline_score": 0.23690742254257202,
+      "flagged": true
+    },
+    {
+      "id": "contamination-014",
+      "path": "bottle/test/contamination/014.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/014_mask.png",
+      "score": 3.246645212173462,
+      "baseline_score": 0.033949658274650574,
+      "flagged": true
+    },
+    {
+      "id": "contamination-015",
+      "path": "bottle/test/contamination/015.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/015_mask.png",
+      "score": 3.0754246711730957,
+      "baseline_score": 0.03321578726172447,
+      "flagged": true
+    },
+    {
+      "id": "contamination-016",
+      "path": "bottle/test/contamination/016.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/016_mask.png",
+      "score": 2.35499906539917,
+      "baseline_score": 0.04644560441374779,
+      "flagged": true
+    },
+    {
+      "id": "contamination-017",
+      "path": "bottle/test/contamination/017.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/017_mask.png",
+      "score": 3.687431812286377,
+      "baseline_score": 0.3728494644165039,
+      "flagged": true
+    },
+    {
+      "id": "contamination-018",
+      "path": "bottle/test/contamination/018.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/018_mask.png",
+      "score": 3.3854780197143555,
+      "baseline_score": 0.09148502349853516,
+      "flagged": true
+    },
+    {
+      "id": "contamination-019",
+      "path": "bottle/test/contamination/019.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/019_mask.png",
+      "score": 1.9738425016403198,
+      "baseline_score": 0.019265932962298393,
+      "flagged": true
+    },
+    {
+      "id": "contamination-020",
+      "path": "bottle/test/contamination/020.png",
+      "defect": "contamination",
+      "anomalous": true,
+      "mask": "bottle/ground_truth/contamination/020_mask.png",
+      "score": 2.247152328491211,
+      "baseline_score": 0.0290989950299263,
+      "flagged": true
+    },
+    {
+      "id": "good-000",
+      "path": "bottle/test/good/000.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.5067400932312012,
+      "baseline_score": 0.0438670814037323,
+      "flagged": false
+    },
+    {
+      "id": "good-001",
+      "path": "bottle/test/good/001.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4766275882720947,
+      "baseline_score": 0.004042265936732292,
+      "flagged": false
+    },
+    {
+      "id": "good-002",
+      "path": "bottle/test/good/002.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.5315396785736084,
+      "baseline_score": 0.013866499997675419,
+      "flagged": false
+    },
+    {
+      "id": "good-003",
+      "path": "bottle/test/good/003.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4346261024475098,
+      "baseline_score": 0.015786033123731613,
+      "flagged": false
+    },
+    {
+      "id": "good-004",
+      "path": "bottle/test/good/004.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4606363773345947,
+      "baseline_score": 0.007169893477112055,
+      "flagged": false
+    },
+    {
+      "id": "good-005",
+      "path": "bottle/test/good/005.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4484171867370605,
+      "baseline_score": 0.011333671398460865,
+      "flagged": false
+    },
+    {
+      "id": "good-006",
+      "path": "bottle/test/good/006.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.6009832620620728,
+      "baseline_score": 0.009517138823866844,
+      "flagged": false
+    },
+    {
+      "id": "good-007",
+      "path": "bottle/test/good/007.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.490824818611145,
+      "baseline_score": 0.010033988393843174,
+      "flagged": false
+    },
+    {
+      "id": "good-008",
+      "path": "bottle/test/good/008.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4605239629745483,
+      "baseline_score": 0.007583484519273043,
+      "flagged": false
+    },
+    {
+      "id": "good-009",
+      "path": "bottle/test/good/009.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.5417616367340088,
+      "baseline_score": 0.015293091535568237,
+      "flagged": false
+    },
+    {
+      "id": "good-010",
+      "path": "bottle/test/good/010.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.517406940460205,
+      "baseline_score": 0.029664093628525734,
+      "flagged": false
+    },
+    {
+      "id": "good-011",
+      "path": "bottle/test/good/011.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.435362696647644,
+      "baseline_score": 0.009866324253380299,
+      "flagged": false
+    },
+    {
+      "id": "good-012",
+      "path": "bottle/test/good/012.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.491870403289795,
+      "baseline_score": 0.011577620171010494,
+      "flagged": false
+    },
+    {
+      "id": "good-013",
+      "path": "bottle/test/good/013.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.5124953985214233,
+      "baseline_score": 0.03156834468245506,
+      "flagged": false
+    },
+    {
+      "id": "good-014",
+      "path": "bottle/test/good/014.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4537477493286133,
+      "baseline_score": 0.01176479086279869,
+      "flagged": false
+    },
+    {
+      "id": "good-015",
+      "path": "bottle/test/good/015.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.6026774644851685,
+      "baseline_score": 0.00681294035166502,
+      "flagged": false
+    },
+    {
+      "id": "good-016",
+      "path": "bottle/test/good/016.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.5037460327148438,
+      "baseline_score": 0.01140224002301693,
+      "flagged": false
+    },
+    {
+      "id": "good-017",
+      "path": "bottle/test/good/017.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.4379150867462158,
+      "baseline_score": 0.011646145954728127,
+      "flagged": false
+    },
+    {
+      "id": "good-018",
+      "path": "bottle/test/good/018.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.5604904890060425,
+      "baseline_score": 0.013444432057440281,
+      "flagged": false
+    },
+    {
+      "id": "good-019",
+      "path": "bottle/test/good/019.png",
+      "defect": "good",
+      "anomalous": false,
+      "mask": null,
+      "score": 1.6519296169281006,
+      "baseline_score": 0.017518319189548492,
+      "flagged": true
+    }
+  ],
+  "limitations": [
+    "One category; 83 test images. No claim of performance on arbitrary products.",
+    "Calibration assumes exchangeable normal images; camera and lighting shifts can break it.",
+    "Scores and heatmap intensities are distances, not calibrated defect probabilities.",
+    "Bootstrap intervals condition on a fixed model; they exclude fitting/calibration uncertainty."
+  ]
+}

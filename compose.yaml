@@ -1,0 +1,19 @@
+services:
+  forgesight:
+    build: .
+    ports:
+      - "127.0.0.1:8010:8010"
+    volumes:
+      - inspection-data:/app/data
+      - inspection-models:/app/artifacts
+      - inspection-reports:/app/reports
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+volumes:
+  inspection-data:
+  inspection-models:
+  inspection-reports:

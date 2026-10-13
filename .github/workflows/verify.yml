@@ -1,0 +1,36 @@
+name: Verify ForgeSight
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -r requirements-torch-cpu.txt
+      - run: .venv/bin/python -m pip install -c requirements.lock -e ".[dev]"
+      - run: .venv/bin/python -m black --check src tests scripts run.py
+      - run: .venv/bin/python -m isort --check-only src tests scripts run.py
+      - run: .venv/bin/python -m flake8 src tests scripts run.py
+      - run: .venv/bin/python -m pytest --cov=forgesight --cov-fail-under=80
+      - run: npm ci --prefix web
+      - run: npm run format:check --prefix web
+      - run: npm run build --prefix web

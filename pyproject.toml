@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "forgesight"
+version = "0.1.0"
+description = "A reproducible deep-feature anomaly inspection workbench"
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Mohammad Eslamifar"}]
+dependencies = [
+  "torch==2.11.0", "numpy>=2.2,<3",
+  "pillow>=12.2,<13", "scipy>=1.16,<2", "scikit-learn>=1.7,<2",
+  "fastapi>=0.135,<1", "uvicorn>=0.41,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9,<10", "pytest-cov>=7,<8", "httpx>=0.28,<1", "black>=26,<27", "isort>=7,<8", "flake8>=7,<8"]
+
+[project.scripts]
+forgesight = "forgesight.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/forgesight"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100

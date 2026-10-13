@@ -1,0 +1,45 @@
+# Local environments and tool output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+coverage.xml
+build/
+dist/
+node_modules/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Private inputs, downloaded data, and generated model artifacts
+data/
+artifacts/
+.cache/
+.local/
+*.pt
+*.pth
+*.npz
+*.onnx
+*.db*
+*.sqlite*
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Personal career notes stay local
+/docs/PORTFOLIO.md

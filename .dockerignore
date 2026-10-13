@@ -1,0 +1,16 @@
+.git
+.venv
+.idea
+.local
+data
+artifacts
+web/node_modules
+web/dist
+web/test-results
+web/playwright-report
+**/__pycache__
+.pytest_cache
+.coverage
+*.log
+.env*
+docs/images
