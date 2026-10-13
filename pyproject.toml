@@ -11,7 +11,7 @@ readme = "README.md"
 license = "MIT"
 authors = [{name = "Mohammad Eslamifar"}]
 dependencies = [
-  "torch==2.11.0", "numpy>=2.2,<3",
+  "torch==2.13.0", "numpy>=2.2,<3",
   "pillow>=12.2,<13", "scipy>=1.16,<2", "scikit-learn>=1.7,<2",
   "fastapi>=0.135,<1", "uvicorn>=0.41,<1",
 ]

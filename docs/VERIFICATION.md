@@ -1,6 +1,8 @@
 # Verification record
 
-Final local application checks: **2026-10-13**, Windows, Python 3.14.2, Node.js 24.18.0, CPU PyTorch 2.11.0, installed Microsoft Edge through Playwright.
+Initial local application checks: **2026-10-13**, Windows, Python 3.14.2, Node.js 24.18.0, CPU PyTorch 2.11.0, installed Microsoft Edge through Playwright.
+
+Release dependency update: PyTorch is pinned to **2.13.0** to address [GHSA-rrmf-rvhw-rf47](https://github.com/advisories/GHSA-rrmf-rvhw-rf47). After upgrading, all 21 Python tests (81.98% statement coverage), all 7 real-model browser journeys, and `pip check` passed again on Windows. The browser rerun loaded the existing fitted model bundle successfully. The recorded numerical benchmark below remains the original experiment; fresh Linux fitting and evaluation are exercised by the manually dispatched benchmark workflow.
 
 | Check | Observed result |
 | --- | --- |

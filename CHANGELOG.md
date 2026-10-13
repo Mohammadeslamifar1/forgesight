@@ -9,5 +9,6 @@ Initial research release.
 - Inspection studio with uploads, heatmaps, comparison, human review, history, and JSON exports.
 - Checksummed artifacts, pinned data revision, bounded inputs, and concurrency handling.
 - Python tests, real-model browser tests, Docker packaging, documentation, and GitHub workflows.
+- PyTorch 2.13.0 pin addresses GHSA-rrmf-rvhw-rf47 before the initial release.
 
 Scope: local single-user research prototype, validated on one dataset category. Dataset images retain their non-commercial license; no production, multi-category, GPU, or robot-control validation is claimed.
