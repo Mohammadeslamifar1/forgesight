@@ -1,0 +1,25 @@
+name: Bug report
+description: Report unexpected application or model-pipeline behavior.
+title: "Bug: "
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Describe the problem and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the command or UI steps and a public benchmark sample ID if relevant. Do not attach private images or credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, PyTorch, browser, commit, model ID, and relevant sanitized logs.
+    validations:
+      required: true

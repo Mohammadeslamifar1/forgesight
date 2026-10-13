@@ -26,4 +26,4 @@ The Linux container loaded the Windows-created model bundle and scored the first
 
 The locked Starlette TestClient emits a dependency deprecation warning recommending `httpx2`; the test suite currently passes with locked `httpx`. No GPU benchmark, load test, comprehensive manual accessibility audit, formal security audit, or external hosted deployment is claimed.
 
-GitHub workflow files are included. Their presence does not mean a hosted GitHub Actions run has occurred; this project is prepared locally.
+The [GitHub Actions history](https://github.com/Mohammadeslamifar1/forgesight/actions) records hosted verification for published commits. This document records the local checks above; it does not substitute for a particular commit's CI result.

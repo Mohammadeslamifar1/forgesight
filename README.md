@@ -1,5 +1,9 @@
 # ForgeSight
 
+[![Verify ForgeSight](https://github.com/Mohammadeslamifar1/forgesight/actions/workflows/verify.yml/badge.svg)](https://github.com/Mohammadeslamifar1/forgesight/actions/workflows/verify.yml)
+[![Reproduce model benchmark](https://github.com/Mohammadeslamifar1/forgesight/actions/workflows/benchmark.yml/badge.svg)](https://github.com/Mohammadeslamifar1/forgesight/actions/workflows/benchmark.yml)
+[![Source license: MIT](https://img.shields.io/badge/source-MIT-blue.svg)](LICENSE)
+
 **See the defect. Inspect the evidence. Measure the model.**
 
 A computer vision workbench for industrial inspection. ForgeSight learns normal appearance from deep image features, highlights unusual regions, and keeps the model finding separate from an operator's review.
@@ -28,6 +32,8 @@ Requirements: **Python 3.14**, Node.js 24, npm. The tested installation uses CPU
 Open the project folder in PyCharm and run:
 
 ```powershell
+git clone https://github.com/Mohammadeslamifar1/forgesight.git
+cd forgesight
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-torch-cpu.txt
 .\.venv\Scripts\python.exe -m pip install -c requirements.lock -e ".[dev]"
@@ -103,7 +109,7 @@ Python tests use generated fixtures without network downloads, including a real 
 
 Browser tests use the **real fitted model**, a temporary database, and real benchmark images. Run `setup` first. Windows defaults to installed Edge. Linux uses Chromium: from `web`, run `npx playwright install --with-deps chromium`.
 
-Core CI runs Python tests, formatting, and the frontend build. The manually triggered **Reproduce model benchmark** workflow downloads, fits, evaluates, and runs the real-model browser suite. Hosted CI has not run until the repository is pushed and those workflows execute.
+Core CI runs Python tests, formatting, and the frontend build. The manually triggered **Reproduce model benchmark** workflow downloads, fits, evaluates, and runs the real-model browser suite. See the [workflow history](https://github.com/Mohammadeslamifar1/forgesight/actions) for results on published commits; [local verification](docs/VERIFICATION.md) records the development environment checks.
 
 For UI hot reload, keep `run.py` running and use `npm run dev --prefix web`. API documentation is at `/docs` on port 8010.
 

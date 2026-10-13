@@ -1,0 +1,25 @@
+name: Experiment proposal
+description: Propose a measurable model or evaluation improvement.
+title: "Experiment: "
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What do you expect to improve, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Evaluation protocol
+      description: Specify data/license, fitting/calibration/test separation, baseline, metrics, and compute budget.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Success criteria and risks
+      description: Include operating-point errors and distribution-shift behavior, not only AUROC.
+    validations:
+      required: true
